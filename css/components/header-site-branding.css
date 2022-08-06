@@ -359,7 +359,7 @@
 
 .site-branding__text {
   padding-bottom: var(--sp);
-  color: var(--color--white);
+  color: var(--color--gray-0);
   font-size: 18px;
   font-weight: bold;
 }
@@ -386,7 +386,7 @@
   }
 
 .site-branding__slogan {
-  color: var(--color--white);
+  color: var(--color--gray-0);
   font-weight: bold;
   line-height: var(--line-height-s);
   }
