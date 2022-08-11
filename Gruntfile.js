@@ -5,6 +5,7 @@ module.exports = function(grunt) {
   // Project configuration.
   const postcssPresetEnv = require('postcss-preset-env')
   const postcssImport = require('postcss-import')
+  const postcssCSSVariables = require('postcss-css-variables')
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     // Task configuration.
@@ -20,12 +21,13 @@ module.exports = function(grunt) {
           postcssPresetEnv({
             stage: 1
           }),
-          postcssImport()
+          postcssImport(),
+          postcssCSSVariables()
         ]
       },
       dist: {
-        src: 'css/components/header-site-branding.pcss.css',
-        dest: 'css/components/header-site-branding.css'
+        src: 'css/walnut-styles.pcss.css',
+        dest: 'css/walnut-styles.css'
       },
     }
   });

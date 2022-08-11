@@ -288,12 +288,13 @@
 
 .site-branding__inner {
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+  gap: 1rem;
 }
 
 .site-branding__inner .site-branding__wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
 
 .site-branding__inner .site-branding__wrapper a {
@@ -366,6 +367,10 @@
 
 .site-branding__text a {
     color: inherit;
+  }
+
+.site-branding__text .site-branding__name {
+    font-size: 3rem;
   }
 
 @media (--md) {

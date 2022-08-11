@@ -1,0 +1,388 @@
+/*
+  Media query breakpoints.
+  Processed by postcss/postcss-custom-media.
+*/
+
+@custom-media --sm (min-width: 500px);
+
+@custom-media --md (min-width: 700px);
+
+@custom-media --lg (min-width: 1000px);
+
+@custom-media --xl (min-width: 1300px);
+
+/* Navigation related breakpoints */
+
+@custom-media --nav-md (min-width: 500px);
+
+@custom-media --nav (min-width: 1200px);
+
+@custom-media --max-nav (max-width: 1200px);
+
+/* Grid related breakpoints */
+
+@custom-media --grid-md (min-width: 700px);
+
+/* Grid shifts from 6 to 14 columns. */
+
+@custom-media --grid-max (min-width: 1440px);
+
+/* Width of the entire grid maxes out. */
+
+/*
+  Custom CSS properties.
+
+  These are "compiled" by postcss/postcss-custom-properties for IE11 compatibility.
+*/
+
+:root {
+
+  /* Typography */
+
+  /* Layout */
+
+  /* Drupal administrative toolbar heights and width. */
+
+  /*
+    Grid helpers.
+
+    These variables help authors apply widths and negative margins to break items out of
+    the grid, while still conforming to the larger grid system.
+
+    Note we cannot change the values of these custom properties within media queries,
+    as they are processed by postcss/postcss-custom-properties (for IE11 compatibility),
+    which does not support that functionality. Therefore, we need a separate custom
+    property for each breakpoint. 😭
+  */ /* Approximate width of a scrollbar. Doesn't have to be perfect. */
+
+  /* Grid gap across various breakpoints. */
+
+  /* Column counts at various breakpoints. */
+
+  /* Count of grid-gaps at various breakpoints. */
+
+  /* Width of the entire grid at various breakpoints. */
+
+  /* Width of a grid column at various breakpoints */
+
+  /* Layout helpers */ /* Black */ /* Black 1 */ /* Black 2 */ /* Black 3 */ /* Gray Dark */ /* Gray Dark 2 */ /* Gray medium */ /* Gray medium 1 */ /* Gray medium 2 */ /* Black 4 */ /* Gray light */ /* Gray light 1 */ /* Gray light 2 */ /* Blue dark */ /* Blue dark 2 */ /* Blue medium */ /* Blue bright */ /* Blue bright 5 */ /* White */ /* Red */ /* Gold */ /* Green */
+
+  /* Header */
+
+  /* Width of slide out navigation */
+
+  /* Border radius */
+}
+
+/**
+ * @file
+ * Site branding in header.
+ */
+
+[dir="ltr"] .site-branding{
+  margin-left: calc(-1 * 18px);
+  margin-right: 18px;
+}
+
+[dir="rtl"] .site-branding{
+  margin-right: calc(-1 * 18px);
+  margin-left: 18px;
+}
+
+[dir="ltr"] .site-branding{
+  padding-left: 18px;
+}
+
+[dir="rtl"] .site-branding{
+  padding-right: 18px;
+}
+
+[dir="ltr"] .site-branding{
+  padding-right: 18px;
+}
+
+[dir="rtl"] .site-branding{
+  padding-left: 18px;
+}
+
+.site-branding {
+  display: flex;
+  flex-shrink: 1;
+  align-items: flex-end;
+  min-width: calc((2 * calc((undefined - (calc(6 - 1) * 18px)) / 6)) + (2 * 18px) + 18px);
+  min-height: calc(3 * 18px);
+  padding-top: 0;
+  padding-bottom: calc(0.5 * 18px);
+
+  /* @todo - #0d7ab8 isn't currently a variable. */
+  background-image: linear-gradient(160deg, #2494db 0%, #0d7ab8 78.66%);
+}
+
+@media (--sm) {
+
+.site-branding {
+    min-height: calc(4 * 18px);
+}
+  }
+
+@media (--md) {
+
+.site-branding {
+    min-height: calc(6 * 18px);
+    padding-bottom: 18px;
+}
+  }
+
+@media (--lg) {
+
+.site-branding {
+    min-width: calc((2 * calc((calc(undefined - 15px) - (calc(14 - 1) * undefined)) / 14)) + (2 * undefined) + 18px);
+}
+  }
+
+@media (--nav) {
+
+[dir="ltr"] .site-branding{
+    margin-left: calc(-1 * calc(2 * 18px));
+  }
+
+[dir="rtl"] .site-branding{
+    margin-right: calc(-1 * calc(2 * 18px));
+  }
+
+[dir="ltr"] .site-branding{
+    padding-left: calc(2 * 18px);
+  }
+
+[dir="rtl"] .site-branding{
+    padding-right: calc(2 * 18px);
+  }
+
+[dir="ltr"] .site-branding{
+    padding-right: calc(2 * 18px);
+  }
+
+[dir="rtl"] .site-branding{
+    padding-left: calc(2 * 18px);
+  }
+
+.site-branding {
+    min-width: undefined;
+    min-height: calc(10 * 18px);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+  }
+
+@media (--grid-max) {
+
+.site-branding {
+    min-width: undefined;
+}
+  }
+
+[dir="rtl"] .site-branding {
+  background-image: linear-gradient(-160deg, #2494db 0%, #0d7ab8 78.66%);
+}
+
+.site-branding--bg-gray {
+  background: #f7f9fa;
+}
+
+.site-branding--bg-white {
+  background: #fff;
+}
+
+.site-branding__inner {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-branding__inner .site-branding__wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+
+.site-branding__inner .site-branding__wrapper a {
+     text-decoration: none;
+    }
+
+@media (--nav) {
+
+[dir="ltr"] .site-branding__inner .site-branding__wrapper{
+    padding-left: 0;
+  }
+
+[dir="rtl"] .site-branding__inner .site-branding__wrapper{
+    padding-right: 0;
+  }
+
+[dir="ltr"] .site-branding__inner .site-branding__wrapper{
+    padding-right: 0;
+  }
+
+[dir="rtl"] .site-branding__inner .site-branding__wrapper{
+    padding-left: 0;
+  }
+
+.site-branding__inner .site-branding__wrapper {
+    height: calc(6 * 18px);
+    padding-top: calc(0.5 * 18px);
+    padding-bottom: calc(0.5 * 18px);
+  }
+    }
+
+.site-branding__logo {
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.site-branding__logo img {
+    width: auto;
+    max-width: 100%;
+    max-height: calc(5 * 18px);
+  }
+
+@media (--sm) {
+
+.site-branding__logo img {
+      max-height: calc(3 * 18px);
+  }
+    }
+
+@media (--md) {
+
+.site-branding__logo img {
+      max-height: calc(4 * 18px);
+  }
+    }
+
+@media (--nav) {
+
+.site-branding__logo img {
+      max-height: calc(calc(6 * 18px) - 18px);
+  }
+    }
+
+.site-branding__text {
+  padding-bottom: 18px;
+  color: #0d1214;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.site-branding__text a {
+    color: inherit;
+  }
+
+.site-branding__text .site-branding__name {
+    font-size: 3rem;
+  }
+
+@media (--md) {
+
+.site-branding__text {
+    font-size: 28px;
+    line-height: 28px;
+}
+  }
+
+@media (--nav) {
+
+.site-branding__text {
+    letter-spacing: 0.02em;
+    font-size: 32px;
+    line-height: calc(2 * 18px);
+}
+  }
+
+.site-branding__slogan {
+  color: #0d1214;
+  font-weight: bold;
+  line-height: 18px;
+  }
+
+.site-branding--bg-gray .site-branding__text {
+  color: #2494db;
+}
+
+.site-branding--bg-white .site-branding__text {
+  color: #2494db;
+}
+
+[dir="ltr"] .site-branding__logo + .site-branding__text{
+  margin-left: 12px;
+}
+
+[dir="rtl"] .site-branding__logo + .site-branding__text{
+  margin-right: 12px;
+}
+
+.site-branding__logo + .site-branding__text {
+  padding-bottom: 0;
+}
+
+/**
+ * @file
+ * Base Layout.
+ */
+
+.container {
+  width: 100%;
+  max-width: 1350px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+@media (--nav) {
+
+.container {
+    padding-left: calc(2 * 18px);
+    padding-right: calc(2 * 18px);
+}
+  }
+
+.page-wrapper {
+  max-width: 1570px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+/* Contains the social sidebar, and the primary content area. */
+
+@media (--nav) {
+
+.layout-main {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+  }
+
+@media (--nav) {
+
+[dir="ltr"] .main-content{
+    margin-right: auto;
+  }
+
+[dir="rtl"] .main-content{
+    margin-left: auto;
+  }
+
+.main-content {
+    width: calc(100% - 90px);
+}
+  }
+
+.main-content__container {
+  padding-top: calc(3 * 18px);
+}
+
+@media (--md) {
+
+.main-content__container {
+    padding-top: calc(5 * 18px);
+}
+  }
+/*# sourceMappingURL=walnut-styles.css.map */
