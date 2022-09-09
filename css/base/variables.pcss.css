@@ -42,7 +42,8 @@
   --content-left: 90px;
   --container-padding: var(--sp);
   --container-padding-nav: var(--sp2);
-  --site-header-height-wide: var(--sp10);
+  /* --site-header-height-wide: var(--sp10); */
+  --site-header-height-wide: var(--sp6);
 
   /* Drupal administrative toolbar heights and width. */
   --toolbar-height: 39px;
