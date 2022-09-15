@@ -1,0 +1,26 @@
+.site-branding__inner {
+
+    & .site-branding__wrapper {
+  
+    @media (--nav) {
+      height: calc(6 * var(--sp));
+      }
+    }
+  }
+
+  .site-branding__logo {
+  
+    & img {
+  
+      @media (--nav) {
+        max-height: calc(calc(6 * var(--sp)) - var(--sp));
+      }
+    }
+  }
+
+  /* From components/header-navigation.pcss */
+  body:not(.is-always-mobile-nav) .header-nav {
+    @media (--nav) {
+      height: calc(2 * var(--sp));
+    }
+  }

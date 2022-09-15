@@ -6,6 +6,7 @@ module.exports = function(grunt) {
   const postcssPresetEnv = require('postcss-preset-env')
   const postcssImport = require('postcss-import')
   const postcssCSSVariables = require('postcss-css-variables')
+  const postcssCustomMedia = require('postcss-custom-media')
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     // Task configuration.
@@ -22,7 +23,8 @@ module.exports = function(grunt) {
             stage: 1
           }),
           postcssImport(),
-          postcssCSSVariables()
+          postcssCSSVariables(),
+          postcssCustomMedia()
         ]
       },
       dist: {

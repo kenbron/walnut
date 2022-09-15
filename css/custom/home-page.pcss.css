@@ -1,0 +1,28 @@
+
+
+.region.region--hero {
+    @media (--md) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: var(--grid-gap);
+        padding-left: 5%;
+        margin-top: 3rem;
+    }
+}
+
+#block-heroimage .block__content {
+    @media (--md) {
+        margin-block: var(--sp);
+    }
+}
+
+.flexbox-unformatted {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--sp);
+    @media (--md) {
+        flex-direction: row;
+    }
+}

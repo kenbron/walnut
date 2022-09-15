@@ -1,5 +1,4 @@
 global-styling:
   css:
     theme:
-      css/base/variables.css: {}
-      css/components/header-site-branding.css: {}
+      css/walnut-styles.css: {}
