@@ -1,7 +1,10 @@
-.site-branding__inner {
+.site-header {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
+.site-branding__inner {
     & .site-branding__wrapper {
-  
     @media (--nav) {
       height: calc(6 * var(--sp));
       }
@@ -9,9 +12,7 @@
   }
 
   .site-branding__logo {
-  
     & img {
-  
       @media (--nav) {
         max-height: calc(calc(6 * var(--sp)) - var(--sp));
       }

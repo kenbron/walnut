@@ -1,0 +1,23 @@
+.button--primary_border_white {
+    color: var(--color--white);
+    background-color: var(--color--blue-20);
+    border-color: var(--color--white);
+  
+    &:hover,
+    &:focus {
+      color: var(--color--white);
+      border-color: var(--color--white);
+      background-color: var(--color--blue-10);
+    }
+  
+    &:active {
+      color: var(--color--white);
+      background-color: var(--color--blue-20);
+    }
+  
+    &:disabled,
+    &.is-disabled {
+      color: var(--color--white);
+      background-color: var(--color--gray-70);
+    }
+  }
