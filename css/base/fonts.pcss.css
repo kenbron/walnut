@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Lato-regular;
+  src: url('../fonts/lato-regular-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: Lato-bold;
+  src: url('../fonts/lato-bold-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: Lato-italic;
+  src: url('../fonts/lato-italic-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: Barlow;
+  src: url('../fonts/Barlow-Bold-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: Alice;
+  src: url('../fonts/alice-regular-webfont.woff2') format('woff2');
+}
