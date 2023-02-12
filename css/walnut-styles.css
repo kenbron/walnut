@@ -86,10 +86,6 @@ h1, h2, h3, h4, h5, h6, header nav {
     font-family: Barlow, sans-serif;
 }
 
-.site-branding__inner {
-    font-family: Alice, sans-serif;
-}
-
 /**
  * @file
  * Site branding in header.
@@ -300,7 +296,7 @@ h1, h2, h3, h4, h5, h6, header nav {
 
 .site-branding__text {
      font-size: 28px;
-     line-height: 28px;
+     line-height: calc(2 * 18px);
  }
    }
 
@@ -558,12 +554,20 @@ footer .site-footer__inner.container {
   padding-right: 5%;
 }
 
+.site-branding__inner {
+  font-family: Alice, sans-serif;
+}
+
 @media (min-width: 1200px) {
 
 .site-branding__inner .site-branding__wrapper {
-      height: calc(6 * 18px);
+    height: calc(6 * 18px);
+  }
     }
-      }
+
+.site-branding__slogan {
+  font-family: Alice, sans-serif;
+}
 
 @media (min-width: 1200px) {
 
@@ -580,6 +584,32 @@ body:not(.is-always-mobile-nav) .header-nav {
       height: calc(2 * 18px);
   }
     }
+
+/* Block added because Olivero doesn't display the site slogan */
+
+#block-siteslogan {
+  padding-left: 5%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 700px) {
+
+#block-siteslogan {
+    grid-column: span 2;
+    margin-bottom: 0;
+    justify-self: start;
+    margin-top: -3rem;
+    padding-left: 1rem;
+}
+  }
+
+@media (min-width: 1200px) {
+
+#block-siteslogan {
+    margin-top: -4rem;
+}
+  }
 
 .button--primary_border_white {
     color: #fff;

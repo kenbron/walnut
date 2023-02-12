@@ -4,12 +4,16 @@
 }
 
 .site-branding__inner {
-    & .site-branding__wrapper {
-    @media (--nav) {
-      height: calc(6 * var(--sp));
-      }
+  font-family: Alice, sans-serif;
+  & .site-branding__wrapper {
+  @media (--nav) {
+    height: calc(6 * var(--sp));
     }
   }
+}
+.site-branding__slogan {
+  font-family: Alice, sans-serif;
+}
 
   .site-branding__logo {
     & img {
@@ -25,3 +29,20 @@
       height: calc(2 * var(--sp));
     }
   }
+
+/* Block added because Olivero doesn't display the site slogan */
+#block-siteslogan {
+  padding-left: 5%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  @media (--md) {
+    grid-column: span 2;
+    margin-bottom: 0;
+    justify-self: start;
+    margin-top: -3rem;
+    padding-left: 1rem;
+  }
+  @media (--nav) {
+    margin-top: -4rem;
+  }
+}

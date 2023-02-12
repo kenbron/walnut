@@ -115,7 +115,7 @@
  
    @media (--md) {
      font-size: 28px;
-     line-height: 28px;
+     line-height: var(--sp2);
    }
  
    @media (--nav) {
@@ -140,4 +140,3 @@
    margin-inline-start: 12px;
    padding-block-end: 0;
  }
- 
