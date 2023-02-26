@@ -143,8 +143,12 @@
   --color--white: #fff; /* White */
   --color--red: #e33f1e; /* Red */
   --color--gold: #fdca40; /* Gold */
-  --color--green: #3fa21c; /* Green */
-
+  --color--green: #3E7054; /* Green - Grass */
+  --color--green-1: #36573B; /* Green - Ivy */
+  --color--purple: #66435A; /* Purple - Grape */
+  --color--purple-1: #7D5971; /* Purple - Grape Hover */ 
+   /* --color--green: #3fa21c;  Default Olivero Green */
+ 
   /* Header */
   --header-height-wide-when-fixed: calc(10 * var(--sp));
 

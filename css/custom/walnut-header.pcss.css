@@ -31,6 +31,12 @@
   }
 
 /* Block added because Olivero doesn't display the site slogan */
+.region.region--hero {
+  @media (--md) {
+    padding-left: 9%;
+    margin-top: 3rem;
+  }
+}
 #block-siteslogan {
   padding-left: 5%;
   margin-top: 0.5rem;

@@ -126,14 +126,14 @@
  }
  
  .site-branding__slogan {
-   color: var(--color--gray-0);
+   color: var(--color--green);
    font-weight: bold;
    line-height: var(--line-height-s);
    }
  
  .site-branding--bg-gray .site-branding__text,
  .site-branding--bg-white .site-branding__text {
-   color: var(--color--blue-50);
+   color: var(--color--green);
  }
  
  .site-branding__logo + .site-branding__text {
