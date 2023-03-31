@@ -48,9 +48,8 @@
 
   /* Width of a grid column at various breakpoints */
 
-  /* Layout helpers */ /* Black */ /* Black 1 */ /* Black 2 */ /* Black 3 */ /* Gray Dark */ /* Gray Dark 2 */ /* Gray medium */ /* Gray medium 1 */ /* Gray medium 2 */ /* Black 4 */ /* Gray light */ /* Gray light 1 */ /* Gray light 2 */ /* Blue dark */ /* Blue dark 2 */ /* set to Ivy not Blue medium */ /* Blue bright */ /* Blue bright 5 */ /* White */ /* Red */ /* Gold */ /* Green - Grass */ /* Green - Ivy */ /* Purple - Grape */ /* Purple - Grape Hover */ 
+  /* Layout helpers */ /* Black */ /* Black 1 */ /* Black 2 */ /* Black 3 */ /* Gray Dark */ /* Gray Dark 2 */ /* Gray medium */ /* Gray medium 1 */ /* Gray medium 2 */ /* Black 4 */ /* Gray light */ /* Gray light 1 */ /* Gray light 2 */ /* Blue dark */ /* Blue dark 2 */ /* Blue medium */ /* Blue bright */ /* Blue bright 5 */ /* White */ /* Red */ /* Gold */ /* Green - Grass */ /* Green - Ivy */ /* Purple - Grape */ /* Purple - Grape Hover */ 
    /* --color--green: #3fa21c;  Default Olivero Green */
-   /* --color--blue-50: #2494db; /* Default Olivero Blue medium */
  
   /* Header */
 
@@ -197,12 +196,6 @@ footer .site-footer__inner.container {
     }
         }
 
-.path-frontpage .container {
-        padding-left: 0;
-        padding-right: 0;
-        max-width: 100%;
-    }
-
 .path-frontpage .block-views {
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -221,6 +214,12 @@ footer .site-footer__inner.container {
 .path-frontpage #block-views-block-event2-block-1 .block__title {
             color: white;
         }
+
+.path-frontpage .main-content__container.container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%
+    }
 
 .path-frontpage .flexbox-unformatted {
         display: flex;
@@ -340,10 +339,10 @@ footer .site-footer__inner.container {
    min-width: calc((2 * calc((undefined - (calc(6 - 1) * 18px)) / 6)) + (2 * 18px) + 18px);
    min-height: calc(3 * 18px);
    padding-top: 0;
-   padding-bottom: calc(0.5 * 18px);
+   padding-bottom: 0; /* Changed from 0 var(--sp0-5); */
  
    /* @todo - #0d7ab8 isn't currently a variable. */
-   background-image: linear-gradient(160deg, #3E7054 0%, #0d7ab8 78.66%);
+   background-image: linear-gradient(160deg, #2494db 0%, #0d7ab8 78.66%);
  }
 
 @media (min-width: 500px) {
@@ -357,7 +356,7 @@ footer .site-footer__inner.container {
 
 .site-branding {
      min-height: calc(6 * 18px);
-     padding-bottom: 18px;
+     /* padding-block-end: var(--sp); */
  }
    }
 
@@ -410,7 +409,7 @@ footer .site-footer__inner.container {
    }
 
 [dir="rtl"] .site-branding {
-   background-image: linear-gradient(-160deg, #3E7054 0%, #0d7ab8 78.66%);
+   background-image: linear-gradient(-160deg, #2494db 0%, #0d7ab8 78.66%);
  }
 
 .site-branding--bg-gray {
@@ -556,6 +555,19 @@ footer .site-footer__inner.container {
   padding-right: 5%;
 }
 
+.container.site-header__inner__container {
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+}
+
+@media (min-width: 700px) {
+
+.container.site-header__inner__container {
+    display: flex;
+}
+  }
+
 .site-branding__inner {
   font-family: Alice, sans-serif;
 }
@@ -601,6 +613,7 @@ body:not(.is-always-mobile-nav) .header-nav {
   padding-left: 5%;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  align-self: flex-end;
 }
 
 @media (min-width: 700px) {
@@ -609,7 +622,6 @@ body:not(.is-always-mobile-nav) .header-nav {
     grid-column: span 2;
     margin-bottom: 0;
     justify-self: start;
-    margin-top: -3rem;
     padding-left: 1rem;
 }
   }
@@ -617,9 +629,83 @@ body:not(.is-always-mobile-nav) .header-nav {
 @media (min-width: 1200px) {
 
 #block-siteslogan {
-    margin-top: -4rem;
 }
   }
+
+/* From Olivero header-navigation.pcss.css */
+
+@media (min-width: 1200px) {
+
+[dir="ltr"] body:not(.is-always-mobile-nav) .header-nav {
+    padding-left: 0;
+  }
+
+[dir="rtl"] body:not(.is-always-mobile-nav) .header-nav {
+    padding-right: 0;
+  }
+
+[dir="ltr"] body:not(.is-always-mobile-nav) .header-nav {
+    padding-right: 0;
+  }
+
+[dir="rtl"] body:not(.is-always-mobile-nav) .header-nav {
+    padding-left: 0;
+  }
+
+body:not(.is-always-mobile-nav) .header-nav {
+    position: static;
+    display: flex;
+    visibility: visible;
+    overflow: visible;
+    grid-column: 5 / 15;
+    align-items: center;
+    justify-content: flex-start; /* Changed from flex-end to flex-start */
+    max-width: none;
+    height: 6rem; /* Changed from var(--header-height-wide-when-fixed) */
+    margin-top: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: transform 0.2s;
+    transform: none;
+    border-top: 0;
+    box-shadow: none;
+}
+  }
+
+/* From: Olivero site-header.pcss.css: Hide the desktop nav when it's fixed and not active. */
+
+@media (min-width: 1200px) {
+
+body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded) .site-header__inner {
+    transform: translateX(0); /* LTR */
+    opacity: 1;
+}
+  }
+
+@media (min-width: 1200px) {
+
+[dir="rtl"] body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded) .site-header__inner {
+    transform: translateX(0);
+}
+  }
+
+/* From Olivero site-header.pcss.css: stop the header from sticking to the top of the page */
+
+@media (min-width: 1200px) {
+    body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed {
+      position: static; /* Changed to static so it doesn't stick to the top of the page when scrolling */
+      z-index: 102; /* Appear above body content that is position: relative */
+      top: calc(-1 * calc(4 * 18px));
+      max-width: 1570px;
+    }
+}
+
+/* From Olivero site-header.pcss.css: modify header flex for site slogan */
+
+.site-header__inner__container {
+  display: flex;
+  justify-content: flex-start;
+}
 
 .button {
   border: solid 2px #66435A;

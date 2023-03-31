@@ -3,6 +3,15 @@
   padding-right: 5%;
 }
 
+.container.site-header__inner__container {
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  @media (--md) {
+    display: flex;
+  }
+}
+
 .site-branding__inner {
   font-family: Alice, sans-serif;
   & .site-branding__wrapper {
@@ -41,14 +50,70 @@
   padding-left: 5%;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+  align-self: flex-end;
   @media (--md) {
     grid-column: span 2;
     margin-bottom: 0;
     justify-self: start;
-    margin-top: -3rem;
     padding-left: 1rem;
   }
   @media (--nav) {
-    margin-top: -4rem;
   }
+}
+
+/* From Olivero header-navigation.pcss.css */
+body:not(.is-always-mobile-nav) .header-nav {
+  @media (--nav) {
+    position: static;
+    display: flex;
+    visibility: visible;
+    overflow: visible;
+    grid-column: 5 / 15;
+    align-items: center;
+    justify-content: flex-start; /* Changed from flex-end to flex-start */
+    max-width: none;
+    height: 6rem; /* Changed from var(--header-height-wide-when-fixed) */
+    margin-block-start: auto;
+    padding-block: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    transition: transform 0.2s;
+    transform: none;
+    border-block-start: 0;
+    box-shadow: none;
+  }
+}
+
+/* From: Olivero site-header.pcss.css: Hide the desktop nav when it's fixed and not active. */
+body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded) .site-header__inner {
+  @media (--nav) {
+    transform: translateX(0); /* LTR */
+    opacity: 1;
+  }
+}
+
+[dir="rtl"] body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded) .site-header__inner {
+  @media (--nav) {
+    transform: translateX(0);
+  }
+}
+
+
+/* From Olivero site-header.pcss.css: stop the header from sticking to the top of the page */
+@media (--nav) {
+  body:not(.is-always-mobile-nav) {
+    & .site-header__fixable.is-fixed {
+      position: static; /* Changed to static so it doesn't stick to the top of the page when scrolling */
+      z-index: 102; /* Appear above body content that is position: relative */
+      inset-block-start: calc(-1 * var(--sp4));
+      max-width: var(--max-bg-color);
+    }
+  }
+}
+
+/* From Olivero site-header.pcss.css: modify header flex for site slogan */
+
+.site-header__inner__container {
+  display: flex;
+  justify-content: flex-start;
 }

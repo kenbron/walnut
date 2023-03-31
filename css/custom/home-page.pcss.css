@@ -37,11 +37,6 @@
         }
     }
 
-    & .container {
-        padding-left: 0;
-        padding-right: 0;
-        max-width: 100%;
-    }
     & .block-views {
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -57,7 +52,11 @@
             color: white;
         }
     }   
-
+    & .main-content__container.container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%
+    }
     & .flexbox-unformatted {
         display: flex;
         flex-direction: column;

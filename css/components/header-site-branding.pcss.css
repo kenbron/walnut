@@ -12,7 +12,7 @@
    min-width: calc((2 * var(--grid-col-width)) + (2 * var(--grid-gap)) + var(--container-padding));
    min-height: var(--sp3);
    margin-inline: calc(-1 * var(--container-padding)) var(--sp);
-   padding-block: 0 var(--sp0-5);
+   padding-block: 0; /* Changed from 0 var(--sp0-5); */
    padding-inline-start: var(--container-padding);
    padding-inline-end: var(--container-padding);
  
@@ -25,7 +25,7 @@
  
    @media (--md) {
      min-height: var(--sp6);
-     padding-block-end: var(--sp);
+     /* padding-block-end: var(--sp); */
    }
  
    @media (--lg) {
