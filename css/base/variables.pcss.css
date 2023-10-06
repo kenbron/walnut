@@ -40,10 +40,31 @@
   --max-bg-color: 1570px;
   --sp: 18px;
   --content-left: 90px;
+
+
+    /* Layout helpers */
+    --sp0-25: calc(0.25 * var(--sp));
+    --sp0-5: calc(0.5 * var(--sp));
+    --sp0-75: calc(0.75 * var(--sp));
+    --sp1: calc(1 * var(--sp));
+    --sp1-5: calc(1.5 * var(--sp));
+    --sp2: calc(2 * var(--sp));
+    --sp2-5: calc(2.5 * var(--sp));
+    --sp3: calc(3 * var(--sp));
+    --sp4: calc(4 * var(--sp));
+    --sp5: calc(5 * var(--sp));
+    --sp6: calc(6 * var(--sp));
+    --sp7: calc(7 * var(--sp));
+    --sp8: calc(8 * var(--sp));
+    --sp9: calc(9 * var(--sp));
+    --sp10: calc(10 * var(--sp));
+    --sp11: calc(11 * var(--sp));
+    --sp12: calc(12 * var(--sp));
+
   --container-padding: var(--sp);
   --container-padding-nav: var(--sp2);
   /* --site-header-height-wide: var(--sp10); */
-  --site-header-height-wide: var(--sp6);
+  --site-header-height-wide: var(--sp4);
 
   /* Drupal administrative toolbar heights and width. */
   --toolbar-height: 39px;
@@ -99,24 +120,7 @@
   --grid-col-width--nav: calc((var(--grid-full-width--nav) - (var(--grid-gap-count--nav) * var(--grid-gap--nav))) / var(--grid-col-count--nav));
   --grid-col-width--max: calc((var(--grid-full-width--max) - (var(--grid-gap-count--max) * var(--grid-gap--max))) / var(--grid-col-count--max));
 
-  /* Layout helpers */
-  --sp0-25: calc(0.25 * var(--sp));
-  --sp0-5: calc(0.5 * var(--sp));
-  --sp0-75: calc(0.75 * var(--sp));
-  --sp1: calc(1 * var(--sp));
-  --sp1-5: calc(1.5 * var(--sp));
-  --sp2: calc(2 * var(--sp));
-  --sp2-5: calc(2.5 * var(--sp));
-  --sp3: calc(3 * var(--sp));
-  --sp4: calc(4 * var(--sp));
-  --sp5: calc(5 * var(--sp));
-  --sp6: calc(6 * var(--sp));
-  --sp7: calc(7 * var(--sp));
-  --sp8: calc(8 * var(--sp));
-  --sp9: calc(9 * var(--sp));
-  --sp10: calc(10 * var(--sp));
-  --sp11: calc(11 * var(--sp));
-  --sp12: calc(12 * var(--sp));
+  /* Colors */
   --color--black: #000; /* Black */
   --color--gray-0: #0d1214; /* Black 1 */
   --color--gray-5: #0c0d0e;
@@ -144,6 +148,7 @@
   --color--red: #e33f1e; /* Red */
   --color--gold: #fdca40; /* Gold */
   --color--green: #3E7054; /* Green - Grass */
+  --color--green-hover: #5C9575;
   --color--green-1: #36573B; /* Green - Ivy */
   --color--purple: #66435A; /* Purple - Grape */
   --color--purple-1: #7D5971; /* Purple - Grape Hover */ 

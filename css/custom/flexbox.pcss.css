@@ -1,0 +1,73 @@
+/* Flexbox and Card styles */
+
+.flex-container__cards {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    gap: 1rem;
+}
+
+ul.flex-container__cards {
+    margin-left: 0;
+}
+
+.flex-container__cards > li {
+    padding: 1.5rem;
+    border: 1px solid #E2E2E2;
+    border-radius: 2px;
+    list-style: none;
+}
+
+.flex-width__35ch > li {
+    width: 35ch;
+}
+
+.flex-width__28ch > li {
+    width: 28ch;
+}
+
+.flex-cards {
+
+}
+
+.card-title {
+    margin-top: 0.5rem
+}
+
+.card-body {
+
+}
+
+.card-button {
+
+}
+
+.card-image {
+
+}
+
+/* Flexbox utility class */
+.display-flex {
+    display: flex;
+}
+
+/* Justify Content Utility Classes */
+.flex-start {
+    justify-content: start;
+}
+.flex-end {
+    justify-content: end;
+}
+.flex-center {
+    justify-content: center;
+}
+.flex-space-between {
+    justify-content: space-between;
+}
+.flex-space-around {
+    justify-content: space-around;
+}
+.flex-space-evenly {
+    justify-content: space-evenly;
+}
+

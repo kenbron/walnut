@@ -1,3 +1,12 @@
+@import "../base/variables.pcss.css";
+
 h1, h2, h3, h4, h5, h6, header nav {
     font-family: Barlow, sans-serif;
+}
+
+.breadcrumb__link {
+    color: var(--color--green);
+}
+a.breadcrumb__link:hover {
+    color: var(--color--green-hover);
 }

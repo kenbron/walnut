@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Prepares variables for `breadcrumb.html.twig`.
+ **/
+function yourtheme_preprocess_breadcrumb(&$variables){
+
+  // Remove 'Home' from breadcrumb trail.
+  if (count($variables['breadcrumb'])) {
+    array_shift($variables['breadcrumb']);
+  }
+}

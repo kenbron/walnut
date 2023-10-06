@@ -1,0 +1,23 @@
+/* Landing page content type */
+
+.page-node-type-landing-page {
+   & .sidebar-grid > .site-main {
+        @media (--lg) {
+            grid-column: 1 / 12;
+        }
+    }
+   & .wide-image {
+        @media (--lg) {
+            margin-inline-start: 0;
+            width: 100%;
+        }
+        @media (--nav) {
+            margin-inline-start: 0;
+            width: 100%;
+        }
+        @media (--grid-max) {
+            margin-inline-start: 0;
+            width: 100%;
+        }
+    }
+}

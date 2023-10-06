@@ -67,26 +67,32 @@
           -->
           {# Needs to extend full width so box shadow will also extend. #}
           <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
+            <div class="container site-header__inner__container__walnut__secondaryMenu">
+              
+              {{ page.secondary_menu }}
+
+            </div>
             <div class="container site-header__inner__container">
 
               {{ page.header }}
 
-            </div> <!-- Added this div to move menus to a new line -->
-            <div> <!-- Added this div to move menus to a new line -->
-
+            </div> <!-- Closed this div to move primary menu to a new line -->
+            <div> <!-- Added this div to move primary menu to a new line -->
+              
               {% if page.primary_menu or page.secondary_menu %}
-                <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
+              {#  <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
                   <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="{{ 'Main Menu'|t }}" aria-controls="header-nav" aria-expanded="false">
                     <span class="mobile-nav-button__label">{{ 'Menu'|t }}</span>
                     <span class="mobile-nav-button__icon"></span>
                   </button>
                 </div>
-
+              #}
                 <div id="header-nav" class="header-nav" data-drupal-selector="header-nav">
                   {{ page.primary_menu }}
-                  {{ page.secondary_menu }}
+                  
                 </div>
               {% endif %}
+              
             </div>
           </div>
         </div>

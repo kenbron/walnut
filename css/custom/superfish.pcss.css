@@ -1,0 +1,42 @@
+@import "../base/variables.pcss.css";
+
+.block-superfish {
+    background: white;
+}
+
+ul.sf-menu.sf-accordion {
+    background: white;
+}
+
+ul.sf-menu a, #superfish-main-toggle {
+    color: var(--color--green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul.sf-menu a:hover {
+    color: var(--color--green-hover);
+}
+
+#superfish-main-toggle {
+    border: 1px solid;
+    border-color: var(--color--green);
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+a#superfish-main-toggle:hover {
+    color: var(--color--green-hover);
+}
+
+ul.sf-menu ul {
+    background: white;
+    border: 1px solid #3E7054;
+    border-radius: 8px;
+    box-shadow: 5px 5px 0px #3E7054;
+}
+
+ul.sf-menu .sf-sub-indicator {
+    height: 1rem;
+    width: 1rem;
+}

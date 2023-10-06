@@ -1,67 +1,174 @@
+@import "../base/variables.pcss.css";
+
+/* Site Header */
 .site-header {
   padding-left: 5%;
   padding-right: 5%;
 }
 
-.container.site-header__inner__container {
+/* Secondary Menu at Top */
+.container.site-header__inner__container__walnut__secondaryMenu {
+  margin-top: 1rem;
+}
+
+/***** Logo, site name, slogan *****/
+
+.site-header__inner__container {
+  display: flex;
+  justify-content: flex-start;
   padding-left: 0;
   padding-right: 0;
   display: block;
+  margin-bottom: 1rem;
   @media (--md) {
     display: flex;
   }
 }
 
+/* Logo and site name outer wrapper */
+.site-branding {
+  display: block;
+  margin-inline: calc(-1 * var(--container-padding)) var(--sp);
+  padding-block: 0;
+  padding-inline-start: var(--container-padding);
+  padding-inline-end: 0;
+
+  /* @todo - #0d7ab8 isn't currently a variable. */
+  background-image: linear-gradient(160deg, var(--color--blue-50) 0%, #0d7ab8 78.66%);
+
+  @media (--sm) {
+    min-height: var(--sp4);
+  }
+  @media (--md) {
+  }
+  @media (--lg) {
+  }
+  @media (--nav) {
+  }
+  @media (--grid-max) {
+  }
+}
+
+[dir="rtl"] .site-branding {
+  background-image: linear-gradient(-160deg, var(--color--blue-50) 0%, #0d7ab8 78.66%);
+}
+
+.site-branding--bg-gray {
+  background: var(--color--gray-95);
+}
+
+.site-branding--bg-white {
+  background: var(--color--white);
+}
+
+/* Logo and site name inner */
 .site-branding__inner {
+  display: block;
   font-family: Alice, sans-serif;
+  height: 72px;
+  padding-top: 0;
+  padding-bottom: 0;
   & .site-branding__wrapper {
+    display: flex;
+    align-items: flex-end;
+   }
+  @media (--lg) {
+    
+  }
   @media (--nav) {
-    height: calc(6 * var(--sp));
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    height: 90px;
     }
-  }
-}
-.site-branding__slogan {
-  font-family: Alice, sans-serif;
 }
 
-  .site-branding__logo {
-    & img {
-      @media (--nav) {
-        max-height: calc(calc(6 * var(--sp)) - var(--sp));
-      }
+/* Logo */
+.site-branding__logo {
+  flex-shrink: 0;
+  max-width: 100%;
+  & img {
+    width: auto;
+    max-width: 100%;
+    max-height: var(--sp3);
+    @media (--md) {
+      max-height: var(--sp4);
     }
-  }
-
-  /* From components/header-navigation.pcss */
-  body:not(.is-always-mobile-nav) .header-nav {
     @media (--nav) {
-      height: calc(2 * var(--sp));
+      max-height: var(--sp5);
     }
   }
+}
 
-/* Block added because Olivero doesn't display the site slogan */
-.region.region--hero {
-  @media (--md) {
-    padding-left: 9%;
-    margin-top: 3rem;
+/* Site name wrapper */
+.site-branding__text {
+  padding-block-end: var(--sp);
+  color: var(--color--gray-0);
+  & a {
+    color: inherit;
+  }
+  & a:hover {
+    color: var(--color--green-hover);
+  }
+  /* Site name text size */
+  & .site-branding__name {
+    font-size: 3rem;
+    line-height: 2.3rem;
   }
 }
+
+.site-branding--bg-gray .site-branding__text,
+.site-branding--bg-white .site-branding__text {
+  color: var(--color--green);
+}
+
+.site-branding__logo + .site-branding__text {
+  margin-inline-start: 12px;
+  padding-block-end: 0;
+}
+
+/* Site slogan */
 #block-siteslogan {
-  padding-left: 5%;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  padding-left: 3px;
   align-self: flex-end;
-  @media (--md) {
-    grid-column: span 2;
-    margin-bottom: 0;
-    justify-self: start;
-    padding-left: 1rem;
-  }
-  @media (--nav) {
-  }
 }
 
-/* From Olivero header-navigation.pcss.css */
+.site-branding__slogan {
+  color: var(--color--green);
+  font-weight: bold;
+  line-height: var(--line-height-s);
+  font-family: Alice, sans-serif;
+  }
+
+/****** Site Navigation ******/
+
+/* From components/header-navigation.pcss */
+body:not(.is-always-mobile-nav) .header-nav {
+  /* @media (--nav) {
+    height: calc(2 * var(--sp));
+  }
+  height: calc(5 * var(--sp)); */
+  height: 100%;
+}
+/* Keeps the .header-nav in view overriding olivero */
+.header-nav {
+  position: static;
+  display: flex;
+  visibility: visible;
+  overflow: visible;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: none;
+  /* height: var(--header-height-wide-when-fixed); */
+  margin-block-start: auto;
+  padding-block: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  transition: transform 0.2s;
+  transform: none;
+  border-block-start: 0;
+  box-shadow: none;
+}
+  /* From Olivero header-navigation.pcss.css */
 body:not(.is-always-mobile-nav) .header-nav {
   @media (--nav) {
     position: static;
@@ -112,8 +219,3 @@ body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded)
 }
 
 /* From Olivero site-header.pcss.css: modify header flex for site slogan */
-
-.site-header__inner__container {
-  display: flex;
-  justify-content: flex-start;
-}
