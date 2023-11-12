@@ -6,9 +6,88 @@
   padding-right: 5%;
 }
 
-/* Secondary Menu at Top */
+/****** Secondary Menu Region ******/
+
 .container.site-header__inner__container__walnut__secondaryMenu {
   margin-top: 1rem;
+}
+
+/* Put the menus in the secondary menu region on separate lines for small screens */
+.region--secondary-menu {
+  display: block;
+  margin-bottom: 0;
+}
+
+@media (--md) {
+  .region--secondary-menu {
+    /* Keep the secondary nav always aligning to the left side of the page */
+    justify-content: flex-end;
+    /* Put the menus in the secondary menu region on one line for wider screens */
+    display: flex;
+  }
+}
+
+.secondary-nav {
+  margin-inline-end: 2rem;
+}
+
+/* Remove the extra spacing between the secondary nav menus */
+@media (min-width: 75rem) {
+  [dir="ltr"] body:not(.is-always-mobile-nav) .secondary-nav {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+/* Make the secondary menu a little tighter against the right side of the page */
+.container.site-header__inner__container__walnut__secondaryMenu {
+padding-right: 0;
+}
+
+/****** Search region ******/
+
+/* Remove margin at the bottom */
+.region--search > * {
+  margin-bottom: 0;
+}
+
+/* Line up the search button with the secondary menu */
+.container.site-header__inner__container__walnut__search {
+  padding-right: 12px;
+}
+
+/* Control height of region */
+.region--search {
+  height: 4rem;
+}
+@media (--md) {
+  .region--search {
+    height: 0.5rem;
+  }
+}
+
+/* Control layout of search form elements */
+#search-block-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  & .form-actions .button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  & .button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* Make search form not so tall */
+[type="search"], [value="search"] {
+  min-height: 2.375rem;
+}
+
+.button.search-form__submit {
+  height: 2.375rem;
 }
 
 /***** Logo, site name, slogan *****/
@@ -217,5 +296,3 @@ body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded)
     }
   }
 }
-
-/* From Olivero site-header.pcss.css: modify header flex for site slogan */
