@@ -258,7 +258,7 @@ body:not(.is-always-mobile-nav) .header-nav {
     align-items: center;
     justify-content: flex-start; /* Changed from flex-end to flex-start */
     max-width: none;
-    height: 6rem; /* Changed from var(--header-height-wide-when-fixed) */
+    height: 3rem; /* Changed from var(--header-height-wide-when-fixed) */
     margin-block-start: auto;
     padding-block: 0;
     padding-inline-start: 0;
