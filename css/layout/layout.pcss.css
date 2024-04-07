@@ -62,3 +62,10 @@ footer {
     padding-right: 1rem;
   }
 }
+
+/* From layout > layout-footer.pcss.css */
+.site-footer__inner {
+  @media (--nav) {
+    padding-block: var(--sp4);
+  }
+}
