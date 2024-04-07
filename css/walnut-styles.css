@@ -212,6 +212,16 @@ footer .site-footer__inner.container {
     padding-right: 1rem;
   }
 
+/* From layout > layout-footer.pcss.css */
+
+@media (min-width: 1200px) {
+
+.site-footer__inner {
+    padding-top: calc(4 * 18px);
+    padding-bottom: calc(4 * 18px);
+}
+  }
+
 .path-frontpage .page-wrapper {
         max-width: 100%;
     }
@@ -359,6 +369,24 @@ footer .site-footer__inner.container {
                 grid-column: 1 / 15;
         }
             }
+
+/* Remove white space for landing page content */
+
+.path-frontpage #content {
+        margin-bottom: 0;
+    }
+
+.path-frontpage {
+    & .region > #block-walnut-danland-system-main,
+        .region > #block-views-block-event2-block-1 {
+        margin-bottom: 0;
+    }
+    /* Hide landing page content on home page */
+}
+
+.path-frontpage article.node--type-landing-page .node__content {
+        display: none;
+    }
 
 /**
  * @file
