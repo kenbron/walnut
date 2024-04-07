@@ -131,4 +131,16 @@
             }
         }
     }
+    /* Remove white space for landing page content */
+    & #content {
+        margin-bottom: 0;
+    }
+    & .region > #block-walnut-danland-system-main,
+        .region > #block-views-block-event2-block-1 {
+        margin-bottom: 0;
+    }
+    /* Hide landing page content on home page */
+    & article.node--type-landing-page .node__content {
+        display: none;
+    }
 }
