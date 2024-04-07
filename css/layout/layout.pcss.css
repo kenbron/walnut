@@ -16,7 +16,7 @@
 }
 
 .region > #block-walnut-breadcrumbs {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   grid-column: 1 / 13;
   @media (--lg) {
     grid-column: 2 / 13;
