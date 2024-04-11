@@ -58,7 +58,7 @@
 
 footer {
   & .site-footer__inner.container {
-    padding-left: 1rem;
+    padding-left: 4rem;
     padding-right: 1rem;
   }
 }
@@ -67,5 +67,12 @@ footer {
 .site-footer__inner {
   @media (--nav) {
     padding-block: var(--sp4);
+  }
+}
+
+/* Remove border left from footer */
+@media (--nav) {
+  body:not(.is-always-mobile-nav) .site-footer {
+    border-inline-start: 0;
   }
 }
