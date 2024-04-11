@@ -98,6 +98,10 @@ a.breadcrumb__link:hover {
     color: #5C9575;
 }
 
+a.secondary-nav__menu-link:hover {
+    color: #5C9575;
+}
+
 /* From text-content.pcss.css */
 
 /* not sure how the pseudo class is getting added so I'm delaring it here */
@@ -126,6 +130,16 @@ a.breadcrumb__link:hover {
         -webkit-text-decoration-color: #9EC9B1;
                 text-decoration-color: #9EC9B1;
       }
+    }
+
+/* From text-content.pcss.css, reduce margin between p tags. */
+
+@media (min-width: 700px) {
+
+.text-content p, .cke_editable p {
+      margin-top: 18px;
+      margin-bottom: 18px;
+  }
     }
 
 #block-walnut-page-title {
@@ -208,7 +222,7 @@ a.breadcrumb__link:hover {
   }
 
 footer .site-footer__inner.container {
-    padding-left: 1rem;
+    padding-left: 4rem;
     padding-right: 1rem;
   }
 
@@ -221,6 +235,17 @@ footer .site-footer__inner.container {
     padding-bottom: calc(4 * 18px);
 }
   }
+
+/* Remove border left from footer */
+
+@media (min-width: 1200px) {
+  [dir="ltr"] body:not(.is-always-mobile-nav) .site-footer {
+    border-left: 0;
+  }
+  [dir="rtl"] body:not(.is-always-mobile-nav) .site-footer {
+    border-right: 0;
+  }
+}
 
 .path-frontpage .page-wrapper {
         max-width: 100%;
@@ -406,10 +431,8 @@ footer .site-footer__inner.container {
   margin-top: 1rem;
 }
 
-/* Put the menus in the secondary menu region on separate lines for small screens */
-
 .region--secondary-menu {
-  display: block;
+  display: flex;
   margin-bottom: 0;
 }
 
@@ -417,17 +440,36 @@ footer .site-footer__inner.container {
   .region--secondary-menu {
     /* Keep the secondary nav always aligning to the left side of the page */
     justify-content: flex-end;
-    /* Put the menus in the secondary menu region on one line for wider screens */
-    display: flex;
   }
 }
 
 [dir="ltr"] .secondary-nav {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 [dir="rtl"] .secondary-nav {
-  margin-left: 2rem;
+  margin-left: 1rem;
+}
+
+@media (min-width: 700px) {
+  [dir="ltr"] .secondary-nav {
+    margin-right: 2.25rem;
+  }
+  [dir="rtl"] .secondary-nav {
+    margin-left: 2.25rem;
+  }
+}
+
+/* Adjust spacing between menu items */
+
+[dir="ltr"] .secondary-nav__menu-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (min-width: 700px) {
+  [dir="ltr"] .secondary-nav__menu-item:not(:last-child) {
+    margin-right: 2.25rem;
+  }
 }
 
 /* Remove the extra spacing between the secondary nav menus */
@@ -467,7 +509,7 @@ padding-right: 0;
 
 @media (min-width: 700px) {
   .region--search {
-    height: 0.5rem;
+    height: 1.5rem;
   }
 }
 
@@ -475,7 +517,7 @@ padding-right: 0;
 
 #search-block-form {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
@@ -488,6 +530,12 @@ padding-right: 0;
     margin-top: 0;
     margin-bottom: 0;
   }
+
+@media (min-width: 700px) {
+  #search-block-form {
+    justify-content: flex-end;
+  }
+}
 
 /* Make search form not so tall */
 
@@ -934,6 +982,12 @@ ul.sf-menu .sf-sub-indicator {
     width: 1rem;
 }
 
+/* Give the main menu link some room on mobile */
+
+#superfish-main-accordion {
+    margin-top: 1rem;
+}
+
 /* Flexbox and Card styles */
 
 .flex-container__cards {
@@ -967,7 +1021,8 @@ ul.flex-container__cards {
 }
 
 .card-title {
-    margin-top: 0.5rem
+    margin-top: 0.5rem;
+    text-align: center;
 }
 
 .card-body {
