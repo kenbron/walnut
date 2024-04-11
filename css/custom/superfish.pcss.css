@@ -40,3 +40,8 @@ ul.sf-menu .sf-sub-indicator {
     height: 1rem;
     width: 1rem;
 }
+
+/* Give the main menu link some room on mobile */
+#superfish-main-accordion {
+    margin-top: 1rem;
+}
