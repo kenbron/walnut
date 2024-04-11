@@ -31,7 +31,8 @@ ul.flex-container__cards {
 }
 
 .card-title {
-    margin-top: 0.5rem
+    margin-top: 0.5rem;
+    text-align: center;
 }
 
 .card-body {
