@@ -127,7 +127,7 @@ padding-right: 0;
   display: block;
   margin-inline: calc(-1 * var(--container-padding)) var(--sp);
   padding-block: 0;
-  padding-inline-start: var(--container-padding);
+  padding-inline-start: var(--container-padding-nav);
   padding-inline-end: 0;
 
   /* @todo - #0d7ab8 isn't currently a variable. */
@@ -250,10 +250,11 @@ body:not(.is-always-mobile-nav) .header-nav {
 .header-nav {
   position: static;
   display: flex;
+  flex-direction: column;
   visibility: visible;
   overflow: visible;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   max-width: none;
   /* height: var(--header-height-wide-when-fixed); */
   margin-block-start: auto;
@@ -270,13 +271,14 @@ body:not(.is-always-mobile-nav) .header-nav {
   @media (--nav) {
     position: static;
     display: flex;
+    flex-direction: column; 
     visibility: visible;
     overflow: visible;
     grid-column: 5 / 15;
     align-items: center;
     justify-content: flex-start; /* Changed from flex-end to flex-start */
     max-width: none;
-    height: 3rem; /* Changed from var(--header-height-wide-when-fixed) */
+    height: 6rem; /* Changed from var(--header-height-wide-when-fixed) */
     margin-block-start: auto;
     padding-block: 0;
     padding-inline-start: 0;
@@ -313,4 +315,11 @@ body:not(.is-always-mobile-nav) .site-header__fixable.is-fixed:not(.is-expanded)
       max-width: var(--max-bg-color);
     }
   }
+}
+
+/* Help breadcrumbs when in the primary menu block */
+#block-walnut-breadcrumbs {
+  align-self: flex-start;
+  margin-inline-start: 1.5rem;
+  margin-block-start: 1rem;
 }
