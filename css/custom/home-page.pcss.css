@@ -24,7 +24,6 @@
             grid-template-columns: 1fr 1fr;
             grid-gap: var(--grid-gap);
             padding-left: 5%;
-            margin-top: 3rem;
         }
         & #block-homepagewelcomemessage, #block-heroimage {
             padding-left: 5%;
