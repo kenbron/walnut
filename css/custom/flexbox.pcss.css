@@ -13,7 +13,7 @@ ul.flex-container__cards {
 
 .flex-container__cards > li {
     padding: 1.5rem;
-    border: 1px solid #E2E2E2;
+    border: 2px solid #E2E2E2;
     border-radius: 2px;
     list-style: none;
 }
