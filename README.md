@@ -30,3 +30,26 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
+______
+
+I am creating a branch of changes to the Walnut theme.
+The them was originally created to establish a style for the beitam.org web site.
+These changes being checked in on 1/17/2025 promote the use oof Sans Serif fonts in Walnut.
+This was part of the original style design, but was not fully implemented in the first Walnut launch.
+
+There are essentially two changes to this sans serif adoption:
+1. Use of the Lato font as the default font for text in paragraphs
+2. Use of the Metropolis font in the right-hand sidebar navigation links
+
+### Lato
+Three instances of the Lato font are being put in the font folder to enable self hosting of this font.
+In the file text.pcss.css there is a paragraph (p) definition to use Lato.
+Also in the file fonts.pcss.css there are font-face definitions for the three Lato font files, in regular, bold, and italic styles.
+
+### Nav Links in Sidebar
+In the file layout/layout.pcss.css there is a css style definition to use the Metropolis font in the right-hand sidebar navigation links.  this copies the use of Metropolis in the main menu navigation links, including the rendering in a greenish color.
+
+Using grunt a new walnut-styles.css file was generated.
+After some moderate testing, this walnut-styles.css file was installed on the beitam.org live site on 
+1/17/2025
+- Ken Bronstein

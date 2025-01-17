@@ -26,6 +26,11 @@
   }
 }
 
+.menu--sidebar .menu__link {
+  font-family: 'Metropolis', sans-serif;
+  color: rgb(62, 112, 84);
+}
+
 .page-wrapper {
   max-width: var(--max-bg-color);
   background: var(--color--white);
