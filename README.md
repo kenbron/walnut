@@ -33,7 +33,7 @@ export NVM_DIR="$HOME/.nvm"
 ______
 
 I am creating a branch of changes to the Walnut theme.
-The them was originally created to establish a style for the beitam.org web site.
+The theme was originally created to establish a style for the beitam.org web site.
 These changes being checked in on 1/17/2025 promote the use oof Sans Serif fonts in Walnut.
 This was part of the original style design, but was not fully implemented in the first Walnut launch.
 
