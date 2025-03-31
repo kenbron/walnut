@@ -11,16 +11,16 @@ function yourtheme_preprocess_breadcrumb(&$variables){
   }
 }
 
-	/**
-	 * Implements hook_preprocess_node().
-	 */
-	function walnut_preprocess_node(&$variables) {
-	  // Check if the node is a Landing Page.
-	  if ($variables['node']->bundle() === 'landing_page') {
-	    // Target the header image field using its machine name.
-	    if (!empty($variables['content']['field_lp_header_image'])) {
-	      // Add inline CSS to reset the margin.
-	      $variables['content']['field_lp_header_image']['#attributes']['style'] = 'margin-inline-start: 0 !important;';
-	    }
-	  }
+/**
+ * Implements hook_preprocess_node().
+ */
+function walnut_preprocess_node(&$variables) {
+	// Check if the node is a Landing Page.
+	if ($variables['node']->bundle() === 'landing_page') {
+	// Target the header image field using its machine name.
+	if (!empty($variables['content']['field_lp_header_image'])) {
+	    // Add inline CSS to reset the margin.
+	    $variables['content']['field_lp_header_image']['#attributes']['style'] = 'margin-inline-start: 0 !important;';
+		}
 	}
+}
