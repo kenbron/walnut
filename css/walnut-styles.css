@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6, header nav {
     font-family: Barlow, sans-serif;
 }
 
-p { 
+body, li, p { 
     font-family: 'Lato', sans-serif; 
 }
 
@@ -1153,4 +1153,12 @@ ul.flex-container__cards {
             width: 100%;
     }
         }
+
+body {
+  background: none; /* removes Olivero's SVG circles */
+  background-color: #e9ecf1;
+  background-image: url("../images/logo-120.svg");
+  background-repeat: repeat;
+  background-size: 75px auto; /* adjust scaling if needed */
+}
 /*# sourceMappingURL=walnut-styles.css.map */
