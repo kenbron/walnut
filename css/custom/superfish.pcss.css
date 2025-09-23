@@ -45,3 +45,37 @@ ul.sf-menu .sf-sub-indicator {
 #superfish-main-accordion {
     margin-top: 1rem;
 }
+
+/* ADD THIS NEW MOBILE-SPECIFIC SECTION TO THE END OF YOUR FILE */
+/* this section changes the mobile presentation to be a menu button */
+@media (max-width: 768px) {
+  #superfish-main-toggle {
+    background: #0073aa;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-top: 5px;
+    display: inline-block;
+    line-height: 1.2;
+    min-height: auto;
+    border-color: #005a87;
+  }
+  
+  #superfish-main-toggle span {
+    display: none;
+  }
+  
+  #superfish-main-toggle::after {
+    content: "Menu";
+  }
+  
+  #superfish-main-toggle:hover {
+    background: #005a87;
+    color: white;
+  }
+  
+  .sf-accordion-toggle {
+    margin: 5px 0;
+  }
+}
+/* END NEW MOBILE SECTION */

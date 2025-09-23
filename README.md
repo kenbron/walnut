@@ -53,3 +53,8 @@ Using grunt a new walnut-styles.css file was generated.
 After some moderate testing, this walnut-styles.css file was installed on the beitam.org live site on 
 1/17/2025
 - Ken Bronstein
+
+New release on 9/22/2025 - Ken Bronstein
+The Changes for this release are:
+- support for using a menu  button  presentationof the main menu on mobile devices
+- support for an accordion style list to offer descriptions of specialized funds

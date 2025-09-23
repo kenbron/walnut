@@ -1019,6 +1019,43 @@ ul.sf-menu .sf-sub-indicator {
     margin-top: 1rem;
 }
 
+/* ADD THIS NEW MOBILE-SPECIFIC SECTION TO THE END OF YOUR FILE */
+
+/* this section changes the mobile presentation to be a menu button */
+
+@media (max-width: 768px) {
+  #superfish-main-toggle {
+    background: #0073aa;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-top: 5px;
+    display: inline-block;
+    line-height: 1.2;
+    min-height: auto;
+    border-color: #005a87;
+  }
+  
+  #superfish-main-toggle span {
+    display: none;
+  }
+  
+  #superfish-main-toggle::after {
+    content: "Menu";
+  }
+  
+  #superfish-main-toggle:hover {
+    background: #005a87;
+    color: white;
+  }
+  
+  .sf-accordion-toggle {
+    margin: 5px 0;
+  }
+}
+
+/* END NEW MOBILE SECTION */
+
 /* Flexbox and Card styles */
 
 .flex-container__cards {
@@ -1160,5 +1197,87 @@ body {
   background-image: url("../images/logo-120.svg");
   background-repeat: repeat;
   background-size: 75px auto; /* adjust scaling if needed */
+}
+
+.fund-accordion {
+  margin: 0.25rem 0;
+  font-family: sans-serif; /* Set on parent container */
+}
+
+.fund-item {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+
+.fund-title {
+  background-color: #f8f9fa;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85em;
+  line-height: 1.1;
+  border: none;
+  outline: none;
+  font-family: inherit; /* Inherit from parent */
+}
+
+.fund-title:hover {
+  background-color: #e9ecef;
+}
+
+.fund-description {
+  padding: 8px 10px;
+  background-color: white;
+  font-size: 0.8em;
+  line-height: 1.25;
+  font-family: inherit; /* Inherit from parent */
+}
+
+.fund-description p {
+  margin: 0 0 2px 0;
+  font-family: inherit; /* Inherit from parent */
+}
+
+.fund-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Make the Specialized Fund Title Bold */
+
+#block-walnut-specializedfunds .block__title {
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: #f0fff0;
+    padding: 10px 15px;
+    border-radius: 6px;
+    line-height: 1.2; /* Tighten overall line spacing */
+    margin-bottom: 0; /* Remove bottom margin from title */
+}
+
+#block-walnut-specializedfunds .block__title::after {
+    content: "\A(Click on Fund for description)";
+    white-space: pre;
+    font-size: 0.6em;
+    font-weight: normal;
+    font-style: italic;
+    display: block;
+    margin-top: -2px; /* Pull it up slightly */
+    line-height: 1;
+}
+
+/* Remove space between title and content */
+
+#block-walnut-specializedfunds .block__content {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Remove any top margin from the accordion */
+
+#block-walnut-specializedfunds .fund-accordion {
+    margin-top: 0;
+    padding-top: 0;
 }
 /*# sourceMappingURL=walnut-styles.css.map */
