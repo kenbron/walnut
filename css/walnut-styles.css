@@ -1056,6 +1056,110 @@ ul.sf-menu .sf-sub-indicator {
 
 /* END NEW MOBILE SECTION */
 
+/* style the donate button */
+
+/* Two buttons referenced here, the first is thelive site donate button */
+
+/* The 2nd is the drudev donate button */
+
+/* Future drupal major upgrades may require this id selector to change */
+
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913 > a {
+  font-weight: bold;
+  color: white;
+  background-color: #66435A;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+#main-menu-link-contentf0df3270-2241-48de-95f9-196cc561790c > a {
+  font-weight: bold;
+  color: white;
+  background-color: #66435A;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913 > a:hover  {
+  text-decoration: none;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  background-color: #7D5971;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913 > a:focus  {
+  text-decoration: none;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  background-color: #7D5971;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#main-menu-link-contentf0df3270-2241-48de-95f9-196cc561790c > a:hover  {
+  text-decoration: none;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  background-color: #7D5971;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#main-menu-link-contentf0df3270-2241-48de-95f9-196cc561790c > a:focus  {
+  text-decoration: none;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  background-color: #7D5971;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913-accordion> a {
+  font-weight: bold;
+  color: white;
+  background-color: #66435A;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;   /* remove the 2 margin lines to left justify the donate button on mobile */
+  margin-right: auto;  /* leave these margin lines in, to center the donate button on mobile */
+  display: block;
+}
+
+#main-menu-link-contentf0df3270-2241-48de-95f9-196cc561790c-accordion> a {
+  font-weight: bold;
+  color: white;
+  background-color: #66435A;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;   /* remove the 2 margin lines to left justify the donate button on mobile */
+  margin-right: auto;  /* leave these margin lines in, to center the donate button on mobile */
+  display: block;
+}
+
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913-accordion > a:hover {
+  text-decoration: none;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  background-color: #7D5971;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913-accordion > a:focus {
+  text-decoration: none;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  background-color: #7D5971;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 /* Flexbox and Card styles */
 
 .flex-container__cards {

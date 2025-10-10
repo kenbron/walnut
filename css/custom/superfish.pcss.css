@@ -79,3 +79,53 @@ ul.sf-menu .sf-sub-indicator {
   }
 }
 /* END NEW MOBILE SECTION */
+
+/* style the donate button */
+/* Two buttons referenced here, the first is thelive site donate button */
+/* The 2nd is the drudev donate button */
+/* Future drupal major upgrades may require this id selector to change */
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913 > a,
+#main-menu-link-contentf0df3270-2241-48de-95f9-196cc561790c > a {
+  font-weight: bold;
+  color: white;
+  background-color: var(--color--purple);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913 > a:hover,
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913 > a:focus,
+#main-menu-link-contentf0df3270-2241-48de-95f9-196cc561790c > a:hover,
+#main-menu-link-contentf0df3270-2241-48de-95f9-196cc561790c > a:focus  {
+  text-decoration: none;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  background-color: var(--color--purple-1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913-accordion> a,
+#main-menu-link-contentf0df3270-2241-48de-95f9-196cc561790c-accordion> a {
+  font-weight: bold;
+  color: white;
+  background-color: var(--color--purple);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-left: auto;   /* remove the 2 margin lines to left justify the donate button on mobile */
+  margin-right: auto;  /* leave these margin lines in, to center the donate button on mobile */
+  display: block;
+}
+
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913-accordion > a:hover,
+#main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913-accordion > a:focus {
+  text-decoration: none;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  background-color: var(--color--purple-1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
