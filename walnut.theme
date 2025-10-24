@@ -24,3 +24,13 @@ function walnut_preprocess_node(&$variables) {
 		}
 	}
 }
+/**
+ * Implements hook_preprocess_html().  This is used to hide the donate button on the donate page
+ */
+function walnut_preprocess_html(&$variables) {
+  // Add node-specific class to body for better targeting in CSS.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $variables['attributes']['class'][] = 'page-node-' . $node->id();
+  }
+}

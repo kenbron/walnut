@@ -129,3 +129,14 @@ ul.sf-menu .sf-sub-indicator {
   background-color: var(--color--purple-1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
+/*
+ * Hide the Donate main menu item on the donate page only 
+ */
+/* When a major version upgrade happens in drupal - this reference needs to change */
+/* Also the node specific reference would need to change - I would suppose! */
+/* Get the new specific UUID s for the donate button  on the main  menu,  if it is still there */
+body.page-node-2931 #main-menu-link-content3ad2f607-b257-4419-9cf8-77d7fddf5913,
+body.page-node-2931 #main-menu-link-contentf0df3270-2241-48de-95f9-196cc561790c {
+	  display: none !important;
+}
