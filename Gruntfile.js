@@ -1,30 +1,36 @@
 /*global module:false*/
 module.exports = function(grunt) {
-    // These plugins provide necessary tasks.
+
+  // Load Grunt plugins
   grunt.loadNpmTasks('@lodder/grunt-postcss');
-  // Project configuration.
-  const postcssPresetEnv = require('postcss-preset-env')
-  const postcssImport = require('postcss-import')
-  const postcssCSSVariables = require('postcss-css-variables')
-  const postcssCustomMedia = require('postcss-custom-media')
+
+  // Load PostCSS plugins
+  const postcssPresetEnv = require('postcss-preset-env');
+  const postcssImport = require('postcss-import');
+  const postcssCSSVariables = require('postcss-css-variables');
+  const postcssCustomMedia = require('postcss-custom-media');
+  const cssnano = require('cssnano'); // ✅ Added this line
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    // Task configuration.
-    // PostCSS
+
     postcss: {
       options: {
         map: {
-          inline: false , // save all sourcemaps as separate files...
-          annotation: 'css/' // ...to the specified directory
-      },
-
+          inline: false,
+          annotation: 'css/'
+        },
         processors: [
-          postcssPresetEnv({
-            stage: 1
-          }),
+          postcssPresetEnv({ stage: 1 }),
           postcssImport(),
           postcssCSSVariables(),
-          postcssCustomMedia()
+          postcssCustomMedia(),
+          cssnano({
+            preset: ['default', {
+              discardComments: { removeAll: true },
+              normalizeWhitespace: false // keeps formatting readable
+            }]
+          })
         ]
       },
       dist: {
@@ -34,9 +40,5 @@ module.exports = function(grunt) {
     }
   });
 
-
-
-  // Default task.
   grunt.registerTask('default', ['postcss']);
-
 };
