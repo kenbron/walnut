@@ -57,3 +57,8 @@ a.secondary-nav__menu-link:hover {
 #block-walnut-page-title {
   margin-bottom: 2rem;
   }
+
+  /*  Do not display the title on the jobs page  - just this page -kb */
+  .page-node-5161 h1.page-title {
+  display: none;
+}

@@ -1,0 +1,85 @@
+/* style definitions for calendar legend */
+.fc-legend {
+  margin: 0 0 1.25rem 0;
+}
+
+.fc-legend__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+.fc-legend__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;   /* wraps gracefully on mobile */
+  gap: 0.75rem 1.5rem;
+}
+
+.fc-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+}
+
+.fc-legend__swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.fc-legend__swatch--standard  { background-color: #f5ce94; }
+.fc-legend__swatch--services  { background-color: #c7ecff; }
+.fc-legend__swatch--holiday   { background-color: #f7caed; }
+
+/* Force black text on all calendar events - all views */
+a.fc-day-grid-event,
+a.fc-time-grid-event {
+  color: #000000 !important;
+}
+
+a.fc-day-grid-event .fc-title,
+a.fc-time-grid-event .fc-title {
+  color: #000000 !important;
+}
+/* ============================================
+   Calendar page (/events) spacing fixes
+   ============================================ */
+
+/* Remove bottom padding/margin from the Content Above region */
+.path-events .region--content-above {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Remove top padding/margin from the Content region */
+.path-events .region--content {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Remove any margin from the legend block itself */
+.path-events #block-walnut-calendarlegend,
+.path-events #block-walnut-eventlegend {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Remove top margin from the calendar view wrapper */
+.path-events .view-event2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Hide the "Calendar Legend" block title */
+.path-events #block-walnut-calendarlegend .block__title {
+  display: none;
+}

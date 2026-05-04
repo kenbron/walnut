@@ -83,6 +83,10 @@ a.breadcrumb__link:hover,a.secondary-nav__menu-link:hover{
   margin-bottom:2rem;
   }
 
+.page-node-5161 h1.page-title{
+  display:none;
+}
+
 .container{
   max-width:1350px;
   padding-left:18px;
@@ -212,6 +216,11 @@ footer .site-footer__inner.container{
     }
         }
 
+.path-frontpage .view-promoted-to-front-page-sidebar{
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+
 .path-frontpage .block-views{
         padding-bottom:5rem;
         padding-top:5rem;
@@ -325,6 +334,18 @@ footer .site-footer__inner.container{
 .path-frontpage article.node--type-landing-page .node__content{
         display:none;
     }
+
+.path-frontpage #block-views-block-event2-block-1,.path-frontpage #block-walnut-views-block-event2-block-1{
+    background-color:#c6d5f0 !important;
+}
+
+.path-frontpage #block-views-block-event2-block-1 .block__title,.path-frontpage #block-views-block-event2-block-1 .list-grid.background-dark li,.path-frontpage #block-views-block-event2-block-1 .list-grid.background-dark li a,.path-frontpage #block-walnut-views-block-event2-block-1 .block__title,.path-frontpage #block-walnut-views-block-event2-block-1 .list-grid.background-dark li,.path-frontpage #block-walnut-views-block-event2-block-1 .list-grid.background-dark li a{
+    color:#000 !important;
+}
+
+.path-frontpage #block-views-block-event2-block-1 .list-grid li,.path-frontpage #block-walnut-views-block-event2-block-1 .list-grid li{
+    border:1px solid #000;
+}
 
 .site-header{
   padding-left:5%;
@@ -1000,5 +1021,76 @@ body{
 #block-walnut-specializedfunds .block__content,#block-walnut-specializedfunds .fund-accordion{
     margin-top:0;
     padding-top:0;
+}
+
+.fc-legend{
+  margin:0 0 1.25rem;
+}
+
+.fc-legend__title{
+  color:inherit;
+  font-size:.9rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  margin-bottom:.5rem;
+  text-transform:uppercase;
+}
+
+.fc-legend__list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem 1.5rem;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.fc-legend__item{
+  align-items:center;
+  display:flex;
+  font-size:.875rem;
+  gap:.4rem;
+}
+
+.fc-legend__swatch{
+  border-radius:3px;
+  display:inline-block;
+  flex-shrink:0;
+  height:14px;
+  width:14px;
+}
+
+.fc-legend__swatch--standard{ background-color:#f5ce94; }
+
+.fc-legend__swatch--services{ background-color:#c7ecff; }
+
+.fc-legend__swatch--holiday{ background-color:#f7caed; }
+
+a.fc-day-grid-event,a.fc-day-grid-event .fc-title,a.fc-time-grid-event,a.fc-time-grid-event .fc-title{
+  color:#000 !important;
+}
+
+.path-events .region--content-above{
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.path-events .region--content{
+  margin-top:0;
+  padding-top:0;
+}
+
+.path-events #block-walnut-calendarlegend,.path-events #block-walnut-eventlegend{
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.path-events .view-event2{
+  margin-top:0;
+  padding-top:0;
+}
+
+.path-events #block-walnut-calendarlegend .block__title{
+  display:none;
 }
 /*# sourceMappingURL=walnut-styles.css.map */

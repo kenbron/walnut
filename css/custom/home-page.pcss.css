@@ -37,6 +37,12 @@
         }
     }
 
+    /* White space margins for Promoted to Front Page Sidebar view */
+    & .view-promoted-to-front-page-sidebar {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
     & .block-views {
         padding-top: 5rem;
         padding-bottom: 5rem;
@@ -51,7 +57,8 @@
         & .block__title {
             color: white;
         }
-    }   
+    } 
+    
     & .main-content__container.container {
         padding-left: 0;
         padding-right: 0;
@@ -143,3 +150,29 @@
         display: none;
     }
 }
+/* Upcoming Events block - works on both dev and live sites */
+.path-frontpage #block-walnut-views-block-event2-block-1,
+.path-frontpage #block-views-block-event2-block-1 {
+    background-color: #c6d5f0 !important;
+}
+
+.path-frontpage #block-walnut-views-block-event2-block-1 .block__title,
+.path-frontpage #block-views-block-event2-block-1 .block__title {
+    color: black !important;
+}
+
+.path-frontpage #block-walnut-views-block-event2-block-1 .list-grid.background-dark li,
+.path-frontpage #block-views-block-event2-block-1 .list-grid.background-dark li {
+    color: black !important;
+}
+
+.path-frontpage #block-walnut-views-block-event2-block-1 .list-grid.background-dark li a,
+.path-frontpage #block-views-block-event2-block-1 .list-grid.background-dark li a {
+    color: black !important;
+}
+
+.path-frontpage #block-walnut-views-block-event2-block-1 .list-grid li,
+.path-frontpage #block-views-block-event2-block-1 .list-grid li {
+    border: 1px solid black;
+}
+/* End of Upcoming Events block */
